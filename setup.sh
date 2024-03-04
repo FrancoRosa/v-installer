@@ -43,7 +43,7 @@ install_dependency "git" "sudo apt-get install  -y git"
 install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - "
 install_dependency "pm2" "sudo npm i -g pm2"
 sudo pm2 startup
-wget -O ~/settings.js https://raw.githubusercontent.com/francorosa/v-installer/master/settings.js
+wget -O ~/settings.js https://raw.githubusercontent.com/francorosa/v-installer/master/settings.json
 
 # ask wich version to install
 while true; do
@@ -65,5 +65,5 @@ sudo pm2 save
 rm z
 echo "${grn}... installation complete!${rst}"
 
-echo "${grn}... don't forget to edit ${red}settings.js ${rst}"
+echo "${grn}... don't forget to edit ${red}settings.json ${rst}"
 echo "${grn}... after any settings change run ${red}sudo pm2 restart dips${rst}"
