@@ -48,10 +48,10 @@ wget -O ~/dips/settings.json https://raw.githubusercontent.com/francorosa/v-inst
 
 # ask wich version to install
 while true; do
-    echo "Select mode:"
+    echo "${grn}Select mode:"
     echo "1: Install I21A00 - 90% Ullage (TLS450)"
     echo "2: Install I20100 - 100% Ullage (TLS350)"
-    read -p "Enter your choice (1 or 2): " choise
+    read -p "Enter your choice (1 or 2): ${rst}" choise
     case $choise in
         [1]* ) echo "${grn}... installing I21A00 - 90% Ullage (TLS450)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_u_build.js; break;;
         [2]* ) echo "${red}... installing I20100 - 100% Ullage (TLS350)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_build.js; break;;
