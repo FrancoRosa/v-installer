@@ -59,7 +59,7 @@ while true; do
     esac
 done
 
-
+sudo pm2 delete dips
 sudo pm2 start ~/dips/api.js --restart-delay 5000 --max-memory-restart 300M --name "dips"
 sudo pm2 save
 
