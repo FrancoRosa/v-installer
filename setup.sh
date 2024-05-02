@@ -38,9 +38,10 @@ install_dependency () {
     fi
 }
 
-install_dependency "curl" "sudo apt-get install -y curl "
-install_dependency "git" "sudo apt-get install  -y git"
+install_dependency "telnet" "sudo apt install -y telnet"
+install_dependency "curl" "sudo apt install -y curl"
 install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - "
+install_dependency "git" "sudo apt install -y git"
 install_dependency "pm2" "sudo npm i -g pm2"
 sudo pm2 startup
 mkdir ~/dips
@@ -63,6 +64,8 @@ sudo pm2 delete dips
 sudo pm2 start ~/dips/api.js --restart-delay 5000 --max-memory-restart 300M --name "dips"
 sudo pm2 save
 
+# tailscale installation
+curl -fsSL https://tailscale.com/install.sh | sh
 rm z
 echo "${grn}... installation complete!${rst}"
 
