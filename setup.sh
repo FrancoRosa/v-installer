@@ -43,6 +43,7 @@ install_dependency "curl" "sudo apt install -y curl"
 install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - "
 install_dependency "git" "sudo apt install -y git"
 install_dependency "pm2" "sudo npm i -g pm2"
+install_dependency "tailscale" "curl -fsSL https://tailscale.com/install.sh | sh"
 sudo pm2 startup
 mkdir ~/dips
 wget -O ~/dips/settings.json https://raw.githubusercontent.com/francorosa/v-installer/master/settings.json
@@ -65,7 +66,7 @@ sudo pm2 start ~/dips/api.js --restart-delay 5000 --max-memory-restart 300M --na
 sudo pm2 save
 
 # tailscale installation
-curl -fsSL https://tailscale.com/install.sh | sh
+
 rm z
 echo "${grn}... installation complete!${rst}"
 
