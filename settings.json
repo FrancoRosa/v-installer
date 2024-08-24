@@ -1,20 +1,12 @@
 {
-    "id": 100,
-    "name": "New Dips",
-    "email": {
-        "time": [
-            "06:00:00",
-            "12:00:00",
-            "18:00:00",
-            "23:59:00"
-        ],
-        "receivers": [
-            "me@me.com",
-            "you@you.com"
-        ]
-    },
-    "veeder": {
-        "port": 10001,
-        "ip": "192.168.0.4"
-    }
+  "id": 100,
+  "name": "New Dips",
+  "email": {
+    "time": ["10:00:00", "20:00:00"],
+    "receivers": ["km115.franco@gmail.com", "kn.electrical.services@gmail.com"]
+  },
+  "veeder": {
+    "port": 10001,
+    "ip": "192.168.0.4"
+  }
 }
