@@ -1,8 +1,9 @@
 # colors
 red='\e[1;31m'
 grn='\e[1;32m' 
+org='\e[1;93m' 
 rst='\e[0m'
-
+    
 #banner
 echo "${grn}       
     ____  _           
@@ -46,7 +47,16 @@ install_dependency "pm2" "sudo npm i -g pm2"
 install_dependency "tailscale" "curl -fsSL https://tailscale.com/install.sh | sh"
 sudo pm2 startup
 mkdir ~/dips
-wget -O ~/dips/settings.json https://raw.githubusercontent.com/francorosa/v-installer/master/settings.json
+
+# donwload settings if the file does not exists
+if test -f ~/dips/settings.json; then
+    echo "${org}... settings file found skipping download.${rst}"
+else
+    echo "${org}... donwloading settings file.${rst}"
+    wget -O ~/dips/settings.json https://raw.githubusercontent.com/francorosa/v-installer/master/settings.json
+fi
+
+
 
 # ask wich version to install
 while true; do
