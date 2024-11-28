@@ -40,6 +40,7 @@ install_dependency () {
 }
 
 install_dependency "telnet" "sudo apt install -y telnet"
+install_dependency "picocom" "sudo apt install -y picocom"
 install_dependency "curl" "sudo apt install -y curl"
 install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - "
 install_dependency "git" "sudo apt install -y git"
@@ -63,11 +64,13 @@ while true; do
     echo "${grn}Select mode:"
     echo "1: Install I21A00 - 90% Ullage (TLS450)"
     echo "2: Install I20100 - 100% Ullage (TLS350)"
+    echo "3: Install I20100 - 100% Ullage (TLS350-Serial)"
     read -p "Enter your choice (1 or 2): " choise
     case $choise in
         [1]* ) echo "${grn}... installing I21A00 - 90% Ullage (TLS450)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_u_build.js; break;;
         [2]* ) echo "${red}... installing I20100 - 100% Ullage (TLS350)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_build.js; break;;
-        * ) echo "Please answer 1 or 2.";;
+        [3]* ) echo "${red}... installing I20100 - 100% Ullage (TLS350-Serial)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/serial_build.js; break;;
+        * ) echo "Please answer 1, 2 or 3";;
     esac
 done
 
