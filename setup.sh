@@ -54,7 +54,7 @@ mkdir ~/dips
 if test -f ~/dips/settings.json; then
     echo "${org}... settings file found skipping download.${rst}"
 else
-    echo "${org}... donwloading settings file.${rst}"
+    echo "${org}... downloading settings file.${rst}"
     wget -O ~/dips/settings.json https://raw.githubusercontent.com/francorosa/v-installer/master/settings.json
 fi
 
@@ -78,7 +78,7 @@ while true; do
     echo "4: Install I20100 - 100% Ullage ( TLS350-Email )"
     echo "5: Install I21A00 - 90% Ullage ( TLS450-Email )"
     read -p "Enter your choice (1, 2, 3, 4 or 5): " choice
-    case $choise in
+    case $choice in
         [1]* ) echo "${grn}... installing I21A00 - 90% Ullage (TLS450)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_u_build.js; break;;
         [2]* ) echo "${red}... installing I20100 - 100% Ullage (TLS350)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_build.js; break;;
         [3]* ) echo "${red}... installing I20100 - 100% Ullage (TLS350-Serial)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/serial_build.js; npm i serialport; break;;
