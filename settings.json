@@ -2,9 +2,11 @@
   "id": 100,
   "name": "New Dips",
   "email": {
-    "time": ["10:00:00", "20:00:00"],
-    "receivers": ["km115.franco@gmail.com", "kn.electrical.services@gmail.com"]
+    "time": ["10:10:00"],
+    "receivers": ["kn.electrical.services@gmail.com"]
   },
+  "webport":10000,
+  "modbus_port":502,
   "veeder": {
     "port": 10001,
     "ip": "192.168.0.4"
