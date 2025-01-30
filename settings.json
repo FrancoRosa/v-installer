@@ -1,18 +1,14 @@
 {
   "id": 100,
-  "process_name": "dips",
-  "name": "New Unified Dips",
+  "name": "New Dips",
   "email": {
-    "time": ["11:25:00", "13:50:00"],
+    "time": ["10:10:00"],
     "receivers": ["kn.electrical.services@gmail.com"]
   },
   "webport":10000,
   "modbus_port":502,
   "veeder": {
-    "model": 450,
     "port": 10001,
-    "ip": "192.168.0.4",
-    "tank_offset": 0
+    "ip": "192.168.0.4"
   }
 }
- 
