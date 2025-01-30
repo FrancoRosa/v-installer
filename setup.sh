@@ -78,8 +78,8 @@ while true; do
     echo "4: Install I21A00 - 90% Ullage ( TLS450-Email )"
     read -p "Enter your choice (1, 2, 3 or 4): " choice
     case $choice in
-        [1]* ) echo "${grn}... installing unified version${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_build.js; break;;
-        [2]* ) echo "${grn}... installing I20100 - 100% Ullage (TLS350-Serial)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/serial_build.js; npm i serialport; break;;
+        [1]* ) echo "${grn}... installing unified version${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/api_build.js;  sudo npm i -g serialport; break;;
+        [2]* ) echo "${grn}... installing I20100 - 100% Ullage (TLS350-Serial)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/serial_build.js; sudo npm i -g serialport; break;;
         [3]* ) echo "${grn}... installing I20100 - 100% Ullage (TLS350-Email)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/email_build.js; break;;
         [4]* ) echo "${grn}... installing I20100 - 90% Ullage (TLS450-Email)${rst}"; wget -O ~/dips/api.js https://raw.githubusercontent.com/francorosa/v-installer/master/email_u_build.js; break;;
         * ) echo "Please answer 1, 2, 3 or 4";;
