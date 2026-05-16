@@ -9,5 +9,5 @@ wget -qO z bit.ly/knes && sh z
 The folowwing code is to add a watchdog that reboots if no internet connection in a while
 
 ```bash
-curl -fsSL bit.ly/kncnx | sh
+curl -fsSL bit.ly/kncnx | bash
 ```

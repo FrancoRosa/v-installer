@@ -1,15 +1,16 @@
-#!/usr/bin/sh
+#!/bin/bash
 # colors
-red='\e[1;31m'
-grn='\e[1;32m' 
-org='\e[1;93m' 
-rst='\e[0m'
-echo "${grn}... Adding connection watchdog ${rst}"
+red=$'\e[1;31m'
+grn=$'\e[1;32m' 
+org=$'\e[1;93m' 
+rst=$'\e[0m'
 
-wget -O ~/dips/connection.sh https://raw.githubusercontent.com/francorosa/v-installer/master/connection.sh
-mkdir ~/dips
+mkdir -p ~/dips
+
+echo -e "${grn}... Adding connection watchdog ${rst}"
+
+wget -q -O ~/dips/connection.sh https://raw.githubusercontent.com/francorosa/v-installer/master/connection.sh
 sudo pm2 start connection.sh --name "connection" --interpreter bash
 sudo pm2 save
 
-echo "${grn}... connection installation complete!${rst}"
-
+echo -e "${grn}... connection installation complete!${rst}"
