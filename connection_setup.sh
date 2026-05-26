@@ -10,7 +10,7 @@ mkdir -p ~/dips
 echo -e "${grn}... Adding connection watchdog ${rst}"
 
 wget -q -O ~/dips/connection.sh https://raw.githubusercontent.com/francorosa/v-installer/master/connection.sh
-sudo pm2 start connection.sh --name "connection" --interpreter bash
+sudo pm2 start ~/dips/connection.sh --name "connection" --interpreter bash
 sudo pm2 save
 
 echo -e "${grn}... connection installation complete!${rst}"
