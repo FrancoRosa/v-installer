@@ -42,7 +42,7 @@ install_dependency () {
 install_dependency "telnet" "sudo apt install -y telnet"
 install_dependency "picocom" "sudo apt install -y picocom"
 install_dependency "curl" "sudo apt install -y curl"
-install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - "
+install_dependency "node" "sudo apt install nodejs -y" "curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash - "
 install_dependency "git" "sudo apt install -y git"
 install_dependency "lynx" "sudo apt install -y lynx"
 install_dependency "pm2" "sudo npm i -g pm2"
